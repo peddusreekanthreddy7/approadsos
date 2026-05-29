@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "RoadSOS",
+    "slug": "roadsos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#080C14",
+      "resizeMode": "contain"
+    },
+    "plugins": [
+      ["expo-camera", { "cameraPermission": "Allow RoadSOS to access camera for Night Beacon emergency strobe." }],
+      ["expo-location", { "locationAlwaysAndWhenInUsePermission": "Allow RoadSOS to use location for emergency response." }]
+    ],
+    "android": {
+      "adaptiveIcon": { "backgroundColor": "#080C14" },
+      "permissions": ["ACCESS_FINE_LOCATION","ACCESS_COARSE_LOCATION","SEND_SMS","CAMERA","VIBRATE","FLASHLIGHT"],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBSfoWVEcRW9qIbTnAbm8XOaSRLXBdZFPY"
+        }
+      }
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "RoadSOS needs your location for emergency services.",
+        "NSCameraUsageDescription": "RoadSOS uses camera for Night Beacon strobe."
+      }
+    }
+  }
+}
